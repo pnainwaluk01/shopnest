@@ -291,6 +291,7 @@ function createProductCard(product, linkPrefix = "") {
     e.currentTarget.classList.toggle("active", nowActive);
     e.currentTarget.querySelector("use").setAttribute("href", iconHref(nowActive ? "icon-heart-filled" : "icon-heart"));
     showToast(nowActive ? "Added to wishlist" : "Removed from wishlist");
+    trackEvent(nowActive ? "sn_add_to_wishlist" : "sn_remove_from_wishlist", { item_id: product.id, item_name: product.name });
   });
 
   const quickAdd = card.querySelector("[data-quick-add]");
@@ -298,6 +299,7 @@ function createProductCard(product, linkPrefix = "") {
     e.preventDefault();
     addToCart(product.id, 1);
     showToast(`${product.name} added to cart`);
+    trackEvent("sn_add_to_cart", { item_id: product.id, item_name: product.name, price: product.price, quantity: 1 });
   });
 
   return card;

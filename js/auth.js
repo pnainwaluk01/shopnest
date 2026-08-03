@@ -62,6 +62,7 @@ function initLoginForm() {
     const name = namePart.replace(/\b\w/g, (c) => c.toUpperCase());
     saveSession({ name, email: form.email.value.trim() });
     showToast(`Welcome back, ${name.split(" ")[0]}!`);
+    trackEvent("sn_login", { method: "email" });
     setTimeout(() => (window.location.href = "../index.html"), 700);
   });
 }
@@ -110,6 +111,7 @@ function initRegisterForm() {
 
     saveSession({ name: form.fullName.value.trim(), email: form.email.value.trim() });
     showToast(`Account created! Welcome, ${form.fullName.value.trim().split(" ")[0]}.`);
+    trackEvent("sn_sign_up", { method: "email" });
     setTimeout(() => (window.location.href = "../index.html"), 700);
   });
 }

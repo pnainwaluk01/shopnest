@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   renderCheckoutForm(items);
+
+  const totals = computeCheckoutTotals(items);
+  trackEvent("sn_begin_checkout", { value: totals.total, items: items.length });
 });
 
 function computeCheckoutTotals(items) {
@@ -288,6 +291,7 @@ function wireCheckoutSubmit(items, totals) {
     writeStorage(STORAGE_KEYS.lastOrder, order);
     clearCart();
     localStorage.removeItem("ecomm_promo_code");
+    trackEvent("sn_purchase", { transaction_id: order.orderNumber, value: order.totals.total, items: order.items.length, payment_method: order.paymentMethod });
     renderConfirmation(order);
   });
 }

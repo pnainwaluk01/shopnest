@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
       showToast("Subscribed! Thanks for joining our newsletter.");
+      trackEvent("sn_generate_lead", { method: "newsletter" });
       form.reset();
     });
   });

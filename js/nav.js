@@ -54,6 +54,7 @@ function initNavSearch() {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const value = input.value.trim();
+      trackEvent("sn_search", { search_term: value });
       const base = document.body.dataset.assetsRoot === "../" ? "products.html" : "pages/products.html";
       window.location.href = `${base}?q=${encodeURIComponent(value)}`;
     });

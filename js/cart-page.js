@@ -17,6 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedCode = readStorage("ecomm_promo_code", null);
   if (savedCode && PROMO_CODES[savedCode]) appliedPromo = PROMO_CODES[savedCode];
   renderCart();
+
+  const items = getCartDetails();
+  if (items.length) {
+    trackEvent("sn_view_cart", { value: items.reduce((sum, i) => sum + i.subtotal, 0), items: items.length });
+  }
 });
 
 function renderCart() {
@@ -109,6 +114,7 @@ function renderCartItems(items) {
       const product = getProductById(Number(btn.dataset.removeItem));
       removeFromCart(Number(btn.dataset.removeItem));
       showToast(`${product?.name || "Item"} removed from cart`);
+      trackEvent("sn_remove_from_cart", { item_id: product?.id, item_name: product?.name });
       renderCart();
     });
   });
