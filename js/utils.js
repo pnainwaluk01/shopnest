@@ -200,6 +200,24 @@ function showToast(message, type = "success") {
   }, 2600);
 }
 
+/* ---------- analytics ---------- */
+
+/* Fires a GA4 custom event. Safe to call even if gtag hasn't loaded yet
+   (e.g. blocked by an ad blocker) since gtag() itself just no-ops via the
+   dataLayer queue, but we guard anyway for pages where the tag is missing. */
+function trackEvent(eventName, params = {}) {
+  if (typeof gtag === "function") {
+    gtag("event", eventName, params);
+  }
+}
+
+/* Delegated click tracking: any element with data-ga-event="name" fires that
+   GA4 event automatically, so banners/links don't need individual listeners. */
+document.addEventListener("click", (e) => {
+  const el = e.target.closest("[data-ga-event]");
+  if (el) trackEvent(el.dataset.gaEvent);
+});
+
 /* ---------- misc helpers ---------- */
 
 function debounce(fn, delay = 300) {
