@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details — ShopNest</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/product-detail.css">
+</head>
+<body data-assets-root="../">
+
+<header class="site-header">
+  <div class="container navbar">
+    <a href="../index.html" class="nav-logo">
+      <svg class="icon"><use href="../assets/icons/logo.svg#icon"/></svg>
+      Shop<span>Nest</span>
+    </a>
+    <div class="nav-search">
+      <form data-nav-search-form>
+        <input type="text" name="q" placeholder="Search for products, brands and more" autocomplete="off">
+        <button type="submit" aria-label="Search"><svg class="icon"><use href="../assets/icons/search.svg#icon"/></svg></button>
+      </form>
+    </div>
+    <nav class="nav-menu">
+      <a href="../index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="wishlist.html">Wishlist</a>
+      <a href="login.html" data-account-link>Login</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="wishlist.html" class="btn-icon nav-icon-link" aria-label="Wishlist">
+        <svg class="icon"><use href="../assets/icons/heart.svg#icon"/></svg>
+        <span class="badge badge-hidden" data-wishlist-badge>0</span>
+      </a>
+      <a href="cart.html" class="btn-icon nav-icon-link" aria-label="Cart">
+        <svg class="icon"><use href="../assets/icons/cart.svg#icon"/></svg>
+        <span class="badge badge-hidden" data-cart-badge>0</span>
+      </a>
+      <button class="btn-icon nav-hamburger" data-hamburger aria-label="Open menu">
+        <svg class="icon"><use href="../assets/icons/menu.svg#icon"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav-overlay"></div>
+<aside class="mobile-nav">
+  <div class="mobile-nav-head">
+    <strong>Menu</strong>
+    <button data-mobile-close class="btn-icon" aria-label="Close menu"><svg class="icon"><use href="../assets/icons/close.svg#icon"/></svg></button>
+  </div>
+  <div class="mobile-nav-body">
+    <a href="../index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="cart.html">Cart</a>
+    <hr>
+    <a href="login.html" data-mobile-account-link>Login</a>
+    <a href="register.html">Register</a>
+  </div>
+</aside>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumb" data-breadcrumb>
+      <a href="../index.html">Home</a><span class="sep">/</span>
+      <a href="products.html">Products</a><span class="sep">/</span>
+      <span data-breadcrumb-name>Product</span>
+    </nav>
+
+    <div data-product-detail-root>
+      <!-- Populated by product-detail.js -->
+    </div>
+
+    <section class="related-section" data-related-section hidden>
+      <div class="section-head">
+        <h2>You may also like</h2>
+      </div>
+      <div class="product-grid" data-related-grid></div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><svg class="icon"><use href="../assets/icons/logo.svg#icon"/></svg>Shop<span style="color:var(--color-primary)">Nest</span></div>
+        <p class="footer-about">ShopNest is your one-stop destination for electronics, fashion, home essentials and more — quality products, honest prices, delivered fast.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg class="icon"><use href="../assets/icons/facebook.svg#icon"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg class="icon"><use href="../assets/icons/twitter.svg#icon"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg class="icon"><use href="../assets/icons/instagram.svg#icon"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg class="icon"><use href="../assets/icons/youtube.svg#icon"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="login.html">My Account</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping &amp; Returns</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay in the loop</h4>
+        <p style="font-size:0.9rem;color:#9ca3af;">Subscribe for exclusive deals and new arrivals.</p>
+        <form class="newsletter-form" data-newsletter-form>
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-current-year></span> ShopNest. All rights reserved.</span>
+      <div class="footer-payment-icons">Secure payments · COD available</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/utils.js"></script>
+<script src="../js/data/products.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/footer.js"></script>
+<script src="../js/product-detail.js"></script>
+</body>
+</html>

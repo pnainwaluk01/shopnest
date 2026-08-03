@@ -1,1 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopNest — Shop Electronics, Fashion, Home & More</title>
+<meta name="description" content="ShopNest is a modern online store for electronics, fashion, home & kitchen, beauty, sports, books, toys and grocery products.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body data-assets-root="">
 
+<!-- ===================== Header / Navbar ===================== -->
+<header class="site-header">
+  <div class="container navbar">
+    <a href="index.html" class="nav-logo">
+      <svg class="icon"><use href="assets/icons/logo.svg#icon"/></svg>
+      Shop<span>Nest</span>
+    </a>
+    <div class="nav-search">
+      <form data-nav-search-form>
+        <input type="text" name="q" placeholder="Search for products, brands and more" autocomplete="off">
+        <button type="submit" aria-label="Search"><svg class="icon"><use href="assets/icons/search.svg#icon"/></svg></button>
+      </form>
+    </div>
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="pages/products.html">Products</a>
+      <a href="pages/wishlist.html">Wishlist</a>
+      <a href="pages/login.html" data-account-link>Login</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="pages/wishlist.html" class="btn-icon nav-icon-link" aria-label="Wishlist">
+        <svg class="icon"><use href="assets/icons/heart.svg#icon"/></svg>
+        <span class="badge badge-hidden" data-wishlist-badge>0</span>
+      </a>
+      <a href="pages/cart.html" class="btn-icon nav-icon-link" aria-label="Cart">
+        <svg class="icon"><use href="assets/icons/cart.svg#icon"/></svg>
+        <span class="badge badge-hidden" data-cart-badge>0</span>
+      </a>
+      <button class="btn-icon nav-hamburger" data-hamburger aria-label="Open menu">
+        <svg class="icon"><use href="assets/icons/menu.svg#icon"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav-overlay"></div>
+<aside class="mobile-nav">
+  <div class="mobile-nav-head">
+    <strong>Menu</strong>
+    <button data-mobile-close class="btn-icon" aria-label="Close menu"><svg class="icon"><use href="assets/icons/close.svg#icon"/></svg></button>
+  </div>
+  <div class="mobile-nav-body">
+    <a href="index.html">Home</a>
+    <a href="pages/products.html">Products</a>
+    <a href="pages/wishlist.html">Wishlist</a>
+    <a href="pages/cart.html">Cart</a>
+    <hr>
+    <a href="pages/login.html" data-mobile-account-link>Login</a>
+    <a href="pages/register.html">Register</a>
+  </div>
+</aside>
+
+<!-- ===================== Main Content ===================== -->
+<main>
+
+  <!-- Hero banner -->
+  <section class="hero" aria-label="Promotions">
+    <div class="hero-slides" data-hero-slides>
+      <div class="hero-slide active" style="background-image: linear-gradient(120deg, rgba(29,53,87,.85), rgba(69,123,157,.65)), url('images/banners/hero-electronics.jpg');">
+        <div class="container hero-slide-inner">
+          <div class="hero-copy">
+            <span class="eyebrow" style="color:#ffd6a5;">Season Sale</span>
+            <h1>Up to 40% off<br>Electronics &amp; Gadgets</h1>
+            <p>Upgrade your tech with headphones, smartwatches, speakers and more.</p>
+            <a href="pages/products.html?category=electronics" class="btn btn-primary btn-lg">Shop Electronics</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image: linear-gradient(120deg, rgba(124,45,18,.85), rgba(194,65,12,.65)), url('images/banners/hero-fashion.jpg');">
+        <div class="container hero-slide-inner">
+          <div class="hero-copy">
+            <span class="eyebrow" style="color:#ffe8d6;">New Arrivals</span>
+            <h1>Fresh Fashion<br>For Every Season</h1>
+            <p>Discover the latest apparel, footwear, and accessories.</p>
+            <a href="pages/products.html?category=fashion" class="btn btn-primary btn-lg">Shop Fashion</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image: linear-gradient(120deg, rgba(21,82,45,.85), rgba(42,157,143,.65)), url('images/banners/hero-home.jpg');">
+        <div class="container hero-slide-inner">
+          <div class="hero-copy">
+            <span class="eyebrow" style="color:#d9f99d;">Home Essentials</span>
+            <h1>Make Your House<br>Feel Like Home</h1>
+            <p>Cookware, decor, and everyday essentials at great prices.</p>
+            <a href="pages/products.html?category=home-kitchen" class="btn btn-primary btn-lg">Shop Home &amp; Kitchen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="hero-arrow hero-arrow-left" data-hero-prev aria-label="Previous slide"><svg class="icon"><use href="assets/icons/chevron-left.svg#icon"/></svg></button>
+    <button class="hero-arrow hero-arrow-right" data-hero-next aria-label="Next slide"><svg class="icon"><use href="assets/icons/chevron-right.svg#icon"/></svg></button>
+    <div class="hero-dots" data-hero-dots></div>
+  </section>
+
+  <!-- Trust badges -->
+  <section class="trust-strip">
+    <div class="container trust-grid">
+      <div class="trust-item reveal">
+        <svg class="icon"><use href="assets/icons/truck.svg#icon"/></svg>
+        <div><strong>Free Shipping</strong><span>On orders over ₹999</span></div>
+      </div>
+      <div class="trust-item reveal">
+        <svg class="icon"><use href="assets/icons/return.svg#icon"/></svg>
+        <div><strong>Easy Returns</strong><span>7-day return policy</span></div>
+      </div>
+      <div class="trust-item reveal">
+        <svg class="icon"><use href="assets/icons/shield.svg#icon"/></svg>
+        <div><strong>Secure Payments</strong><span>100% protected checkout</span></div>
+      </div>
+      <div class="trust-item reveal">
+        <svg class="icon"><use href="assets/icons/support.svg#icon"/></svg>
+        <div><strong>24/7 Support</strong><span>We're here to help</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Shop by Category</h2>
+        <a href="pages/products.html" class="link-more">View all &rarr;</a>
+      </div>
+      <div class="category-grid" data-category-grid></div>
+    </div>
+  </section>
+
+  <!-- Featured products -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Featured Products</h2>
+        <a href="pages/products.html" class="link-more">View all &rarr;</a>
+      </div>
+      <div class="product-grid reveal" data-featured-grid></div>
+    </div>
+  </section>
+
+  <!-- Promo banners -->
+  <section class="section">
+    <div class="container promo-grid">
+      <a href="pages/products.html?category=beauty" class="promo-card reveal" style="background-image: linear-gradient(120deg, rgba(162,28,175,.8), rgba(240,171,252,.6)), url('images/banners/promo-beauty.jpg');">
+        <span class="eyebrow" style="color:#fff;opacity:.85;">Limited Time</span>
+        <h3>Beauty &amp; Personal Care</h3>
+        <p>Flat 20% off on skincare essentials</p>
+        <span class="promo-cta">Shop now &rarr;</span>
+      </a>
+      <a href="pages/products.html?category=sports" class="promo-card reveal" style="background-image: linear-gradient(120deg, rgba(3,105,161,.8), rgba(125,211,252,.6)), url('images/banners/promo-sports.jpg');">
+        <span class="eyebrow" style="color:#fff;opacity:.85;">Get Active</span>
+        <h3>Sports &amp; Outdoors</h3>
+        <p>Gear up for your next adventure</p>
+        <span class="promo-cta">Shop now &rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section newsletter-section">
+    <div class="container newsletter-inner reveal">
+      <div>
+        <h2>Join the ShopNest Club</h2>
+        <p>Get 10% off your first order plus exclusive deals in your inbox.</p>
+      </div>
+      <form class="newsletter-form newsletter-form-lg" data-newsletter-form>
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== Footer ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><svg class="icon"><use href="assets/icons/logo.svg#icon"/></svg>Shop<span style="color:var(--color-primary)">Nest</span></div>
+        <p class="footer-about">ShopNest is your one-stop destination for electronics, fashion, home essentials and more — quality products, honest prices, delivered fast.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg class="icon"><use href="assets/icons/facebook.svg#icon"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg class="icon"><use href="assets/icons/twitter.svg#icon"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg class="icon"><use href="assets/icons/instagram.svg#icon"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg class="icon"><use href="assets/icons/youtube.svg#icon"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/products.html">All Products</a></li>
+          <li><a href="pages/cart.html">Cart</a></li>
+          <li><a href="pages/wishlist.html">Wishlist</a></li>
+          <li><a href="pages/login.html">My Account</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping &amp; Returns</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay in the loop</h4>
+        <p style="font-size:0.9rem;color:#9ca3af;">Subscribe for exclusive deals and new arrivals.</p>
+        <form class="newsletter-form" data-newsletter-form>
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-current-year></span> ShopNest. All rights reserved.</span>
+      <div class="footer-payment-icons">Secure payments · COD available</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/utils.js"></script>
+<script src="js/data/products.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
